@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schedule your same-day bow rehair — Same Day Bow Rehair</title>
+<meta name="description" content="Book a same-day bow rehair in NJ & NYC. Drop it off this morning, play it tonight. Violin & viola $50, cello & bass $70.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f7f2e8;
+    --cream-2:#f2efe6;
+    --card:#fffdf8;
+    --gold:#c9a06a;
+    --gold-dark:#a97f45;
+    --ink:#2b241a;
+    --muted:#6f6455;
+    --line:#e0d5bd;
+    --error:#a8402f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:700px;margin:0 auto;padding:0 22px;}
+
+  /* ---------- Header ---------- */
+  header{padding:26px 0 6px;}
+  .header-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;}
+  .brand{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:600;letter-spacing:.01em;color:var(--ink);text-decoration:none;}
+  .brand em{color:var(--gold);font-style:normal;}
+  .back-link{font-size:.86rem;color:var(--muted);text-decoration:none;white-space:nowrap;}
+  .back-link:hover{color:var(--gold-dark);}
+  .gold-rule{height:1px;background:linear-gradient(90deg,var(--gold),rgba(201,160,106,0));margin-top:18px;}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:44px 0 8px;text-align:left;}
+  .kicker{font-size:.78rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:16px;}
+  h1{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:2.55rem;line-height:1.15;letter-spacing:.005em;}
+  .sub{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:1.28rem;color:var(--ink);margin-top:16px;}
+  .confirm-line{color:var(--muted);font-size:.98rem;margin-top:10px;max-width:34rem;}
+
+  /* ---------- Steps ---------- */
+  form{padding:18px 0 0;}
+  fieldset{border:0;margin:0 0 38px;}
+  legend{padding:0;margin-bottom:6px;}
+  .step-head{display:flex;align-items:baseline;gap:12px;margin-bottom:6px;}
+  .step-num{font-family:'Playfair Display',Georgia,serif;font-size:1.05rem;color:var(--gold);font-weight:600;letter-spacing:.06em;white-space:nowrap;}
+  .step-title{font-family:'Playfair Display',Georgia,serif;font-size:1.42rem;font-weight:600;}
+  .step-hint{color:var(--muted);font-size:.92rem;margin:2px 0 16px;}
+
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .cards.single{grid-template-columns:1fr;}
+  .cards.three{grid-template-columns:1fr 1fr 1fr;}
+  .card{display:block;cursor:pointer;}
+  .card input{position:absolute;opacity:0;pointer-events:none;}
+  .card-body{
+    display:block;height:100%;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:18px 18px 16px;
+    transition:border-color .15s ease, background .15s ease, box-shadow .15s ease;
+  }
+  .card:hover .card-body{border-color:var(--gold);}
+  .card input:checked + .card-body{
+    border-color:var(--gold);
+    background:#fdf8ec;
+    box-shadow:0 0 0 1px var(--gold) inset, 0 10px 24px rgba(169,127,69,.10);
+  }
+  .card input:focus-visible + .card-body{outline:2px solid var(--gold-dark);outline-offset:2px;}
+  .card-name{display:block;font-weight:600;font-size:1.02rem;}
+  .card-price{display:block;font-family:'Playfair Display',Georgia,serif;font-size:1.35rem;color:var(--gold-dark);margin-top:2px;}
+  .card-desc{display:block;color:var(--muted);font-size:.88rem;margin-top:2px;line-height:1.5;}
+  .note{color:var(--muted);font-size:.9rem;margin-top:14px;}
+  .note strong{color:var(--ink);font-weight:600;}
+
+  /* ---------- Inputs ---------- */
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .field{margin-bottom:16px;}
+  label.lbl{display:block;font-size:.86rem;font-weight:600;letter-spacing:.02em;margin-bottom:7px;}
+  label.lbl .opt{color:var(--muted);font-weight:400;}
+  input[type="text"],input[type="tel"],input[type="date"],select,textarea{
+    width:100%;
+    font-family:inherit;font-size:1rem;color:var(--ink);
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:13px 14px;
+    appearance:none;-webkit-appearance:none;
+  }
+  select{
+    background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a97f45' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat:no-repeat;background-position:right 14px center;background-size:16px;
+    padding-right:42px;
+  }
+  textarea{resize:vertical;min-height:84px;}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold);}
+
+  .field-error{display:none;color:var(--error);font-size:.86rem;margin-top:7px;}
+  .has-error .field-error{display:block;}
+  .has-error input,.has-error select,.has-error textarea{border-color:var(--error);}
+  fieldset.has-error .cards .card-body{border-color:#d9a08f;}
+  fieldset.has-error .cards .card input:checked + .card-body{border-color:var(--gold);}
+
+  /* ---------- Trust strip ---------- */
+  .trust{
+    background:var(--cream-2);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:22px 24px;
+    margin:6px 0 30px;
+    text-align:center;
+  }
+  .trust .t1{font-family:'Playfair Display',Georgia,serif;font-size:1.08rem;line-height:1.55;}
+  .trust .t2{margin-top:8px;font-weight:600;color:var(--gold-dark);letter-spacing:.02em;}
+
+  /* ---------- Submit ---------- */
+  .submit-btn{
+    display:block;width:100%;
+    font-family:inherit;font-size:1.06rem;font-weight:600;
+    background:var(--gold);color:#241a0c;
+    border:0;border-radius:12px;
+    padding:17px 20px;cursor:pointer;
+    transition:background .15s ease, transform .05s ease;
+  }
+  .submit-btn:hover{background:var(--gold-dark);color:#fffdf8;}
+  .submit-btn:active{transform:translateY(1px);}
+  .alt{text-align:center;color:var(--muted);font-size:.92rem;margin-top:16px;}
+  .alt a{color:var(--gold-dark);text-decoration:none;font-weight:500;}
+  .alt a:hover{text-decoration:underline;}
+
+  /* ---------- Footer ---------- */
+  footer{margin-top:56px;border-top:1px solid var(--line);padding:24px 0 40px;text-align:center;}
+  footer p{color:var(--muted);font-size:.86rem;letter-spacing:.06em;}
+
+  @media (max-width:560px){
+    h1{font-size:2.05rem;}
+    .sub{font-size:1.14rem;}
+    .hero{padding-top:32px;}
+    .cards,.cards.three,.grid-2{grid-template-columns:1fr;}
+    .brand{font-size:1.14rem;}
+    .step-title{font-size:1.28rem;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="header-row">
+      <a class="brand" href="https://samedaybowrehair.com">Same Day <em>Bow Rehair</em></a>
+      <a class="back-link" href="https://samedaybowrehair.com">&larr; Back to the site</a>
+    </div>
+    <div class="gold-rule"></div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <p class="kicker">New York &amp; New Jersey</p>
+    <h1>Schedule your same-day bow rehair</h1>
+    <p class="sub">Drop it off this morning. Play it tonight.</p>
+    <p class="confirm-line">Book in under a minute — we confirm your exact time and total by WhatsApp before anything is due.</p>
+  </section>
+
+  <form id="booking-form" novalidate>
+
+    <!-- STEP 1 -->
+    <fieldset id="fs-instrument">
+      <div class="step-head"><span class="step-num">Step 1</span><span class="step-title">Your bow</span></div>
+      <div class="cards">
+        <label class="card">
+          <input type="radio" name="instrument" value="Violin/Viola — $50">
+          <span class="card-body">
+            <span class="card-name">Violin / Viola</span>
+            <span class="card-price">$50</span>
+          </span>
+        </label>
+        <label class="card">
+          <input type="radio" name="instrument" value="Cello/Bass — $70">
+          <span class="card-body">
+            <span class="card-name">Cello / Bass</span>
+            <span class="card-price">$70</span>
+          </span>
+        </label>
+      </div>
+      <p class="note">Premium Mongolian hair included. <strong>Siberian upgrade available</strong> — ask when we confirm.</p>
+      <p class="field-error">Please choose your instrument so we can hold the right bench time.</p>
+    </fieldset>
+
+    <!-- STEP 2 -->
+    <fieldset id="fs-handoff">
+      <div class="step-head"><span class="step-num">Step 2</span><span class="step-title">How your bow gets to us</span></div>
+      <div class="cards three">
+        <label class="card">
+          <input type="radio" name="handoff" value="Drop-off (Woodbridge, NJ)">
+          <span class="card-body">
+            <span class="card-name">Drop-off</span>
+            <span class="card-desc">Woodbridge, NJ</span>
+          </span>
+        </label>
+        <label class="card">
+          <input type="radio" name="handoff" value="Pickup (NJ &amp; NYC)">
+          <span class="card-body">
+            <span class="card-name">Pickup</span>
+            <span class="card-desc">We come to you — NJ &amp; NYC</span>
+          </span>
+        </label>
+        <label class="card">
+          <input type="radio" name="handoff" value="Ship it to us">
+          <span class="card-body">
+            <span class="card-name">Ship it</span>
+            <span class="card-desc">Send your bow to us</span>
+          </span>
+        </label>
+      </div>
+      <p class="note">Pickup fee depends on distance — your exact total (rehair + pickup) is confirmed in our reply. <strong>No surprises.</strong></p>
+      <p class="field-error">Please tell us how your bow will get to us.</p>
+    </fieldset>
+
+    <!-- STEP 3 -->
+    <fieldset id="fs-when">
+      <div class="step-head"><span class="step-num">Step 3</span><span class="step-title">Preferred day &amp; time of day</span></div>
+      <div class="grid-2">
+        <div class="field" id="field-date">
+          <label class="lbl" for="bk-date">Day</label>
+          <input type="date" id="bk-date" name="date" required>
+          <p class="field-error">Please pick a day — today is fine.</p>
+        </div>
+        <div class="field">
+          <label class="lbl" for="bk-daypart">Time of day</label>
+          <select id="bk-daypart" name="daypart">
+            <option value="Morning" selected>Morning</option>
+            <option value="Afternoon">Afternoon</option>
+            <option value="Evening">Evening</option>
+          </select>
+        </div>
+      </div>
+      <p class="note">We confirm your exact time by WhatsApp right after you book.</p>
+    </fieldset>
+
+    <!-- STEP 4 -->
+    <fieldset id="fs-details">
+      <div class="step-head"><span class="step-num">Step 4</span><span class="step-title">Your details</span></div>
+      <div class="grid-2">
+        <div class="field" id="field-name">
+          <label class="lbl" for="bk-name">Name</label>
+          <input type="text" id="bk-name" name="name" autocomplete="name" required>
+          <p class="field-error">We need your name to hold the booking.</p>
+        </div>
+        <div class="field" id="field-phone">
+          <label class="lbl" for="bk-phone">Phone / WhatsApp</label>
+          <input type="tel" id="bk-phone" name="phone" autocomplete="tel" required>
+          <p class="field-error">We confirm by WhatsApp — please add your number.</p>
+        </div>
+      </div>
+      <div class="field">
+        <label class="lbl" for="bk-city">City &amp; neighborhood <span class="opt">(optional — for pickup)</span></label>
+        <input type="text" id="bk-city" name="city" autocomplete="address-level2">
+      </div>
+      <div class="field">
+        <label class="lbl" for="bk-notes">Notes <span class="opt">(optional)</span></label>
+        <textarea id="bk-notes" name="notes" placeholder="Playing tonight? Tell us your deadline — or anything about your bow."></textarea>
+      </div>
+    </fieldset>
+
+    <!-- TRUST -->
+    <div class="trust">
+      <p class="t1">Rehaired by Victor Alaluna — fourth-generation luthier, 25+ years, featured in The Strad.</p>
+      <p class="t2">Not right? We redo it, free.</p>
+    </div>
+
+    <button type="submit" class="submit-btn">Confirm on WhatsApp &rarr;</button>
+    <p class="alt">Prefer email? <a href="mailto:samedaybowrehair@gmail.com">samedaybowrehair@gmail.com</a></p>
+
+  </form>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Serving NJ &amp; NYC &middot; By appointment</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var WA_NUMBER = '18484331021';
+
+  // Date minimum = today (local)
+  var dateInput = document.getElementById('bk-date');
+  var now = new Date();
+  var iso = now.getFullYear() + '-' +
+            String(now.getMonth()+1).padStart(2,'0') + '-' +
+            String(now.getDate()).padStart(2,'0');
+  dateInput.min = iso;
+
+  function prettyDate(isoValue){
+    var d = new Date(isoValue + 'T12:00:00');
+    return d.toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric', year:'numeric'});
+  }
+
+  function buildUrl(state){
+    var lines = [];
+    lines.push('New booking — Same Day Bow Rehair');
+    lines.push('Instrument: ' + state.instrument);
+    lines.push('Handoff: ' + state.handoff);
+    lines.push('Preferred: ' + prettyDate(state.date) + ' · ' + state.daypart);
+    lines.push('Name: ' + state.name);
+    lines.push('Phone: ' + state.phone);
+    if (state.city){ lines.push('City: ' + state.city); }
+    if (state.notes){ lines.push('Notes: ' + state.notes); }
+    return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
+  }
+
+  function checkedValue(name){
+    var el = document.querySelector('input[name="' + name + '"]:checked');
+    return el ? el.value : '';
+  }
+
+  function markError(id, on){
+    var el = document.getElementById(id);
+    if (el){ el.classList.toggle('has-error', !!on); }
+    return !on;
+  }
+
+  var form = document.getElementById('booking-form');
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+
+    var state = {
+      instrument: checkedValue('instrument'),
+      handoff: checkedValue('handoff'),
+      date: dateInput.value,
+      daypart: document.getElementById('bk-daypart').value,
+      name: document.getElementById('bk-name').value.trim(),
+      phone: document.getElementById('bk-phone').value.trim(),
+      city: document.getElementById('bk-city').value.trim(),
+      notes: document.getElementById('bk-notes').value.trim()
+    };
+
+    var results = [
+      markError('fs-instrument', !state.instrument),
+      markError('fs-handoff', !state.handoff),
+      markError('field-date', !state.date),
+      markError('field-name', !state.name),
+      markError('field-phone', !state.phone)
+    ];
+    // date lives inside fs-when; flag the fieldset too for the message placement
+    document.getElementById('fs-when').classList.toggle('has-error', !state.date);
+
+    if (results.indexOf(false) !== -1){
+      var first = document.querySelector('.has-error');
+      if (first){ first.scrollIntoView({behavior:'smooth', block:'center'}); }
+      return;
+    }
+
+    window.open(buildUrl(state), '_blank');
+  });
+
+  // Clear an error as soon as the visitor fixes the field
+  form.addEventListener('change', function(ev){
+    var t = ev.target;
+    if (t.name === 'instrument'){ markError('fs-instrument', false); }
+    if (t.name === 'handoff'){ markError('fs-handoff', false); }
+    if (t.id === 'bk-date'){ markError('field-date', false); document.getElementById('fs-when').classList.remove('has-error'); }
+    if (t.id === 'bk-name'){ markError('field-name', false); }
+    if (t.id === 'bk-phone'){ markError('field-phone', false); }
+  });
+
+  // Exposed for verification only
+  window.__sdbrBuildUrl = buildUrl;
+})();
+</script>
+</body>
+</html>
